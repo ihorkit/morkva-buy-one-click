@@ -1,0 +1,255 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Morkva Buy One Click\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-11 06:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.8.1; php-8.2.28\n"
+"X-Domain: mrkv-buy-one-click"
+
+#. Description of the plugin
+msgid ""
+"Add a quick \"Buy in One Click\" button to your WooCommerce product pages. "
+"Let customers place orders instantly with minimal steps."
+msgstr ""
+
+#: classes/settings/admin/mrkv-buy-one-click-menu.php:48
+msgid "Basic"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:4
+msgid "Basic settings"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:159
+msgid "Button background"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:280
+msgid "Button Font size"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:82
+msgid "Button text (Default: Buy now)"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:172
+msgid "Button text color"
+msgstr ""
+
+#: classes/controller/mrkv-buy-one-click-shortcodes.php:38
+#: classes/controller/mrkv-buy-one-click-shortcodes.php:68
+msgid "Buy now"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:33
+msgid "Choose a status"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:33
+msgid "Choose a status created order"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:240
+msgid "Choose a style"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:247
+msgid "Customize the text in the form"
+msgstr ""
+
+#: templates/elements/template-buy-one-click-support.php:12
+msgid "E-mail"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:15
+msgid "Enable to activate the buy one click functionality on your website"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:12
+msgid "Enable/Disable"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:60
+msgid "Enter the subtitle..."
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:72
+#: templates/settings/template-buy-one-click-sections.php:82
+#: templates/settings/template-buy-one-click-sections.php:94
+#: templates/settings/template-buy-one-click-sections.php:104
+#: templates/settings/template-buy-one-click-sections.php:116
+msgid "Enter the text..."
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:50
+msgid "Enter the title..."
+msgstr ""
+
+#: templates/front/template-buy-one-click-form.php:14
+msgid "Enter your name..."
+msgstr ""
+
+#: templates/elements/template-buy-one-click-support.php:8
+msgid "Feel free to contact our support team."
+msgstr ""
+
+#: templates/front/template-buy-one-click-form.php:13
+msgid "First Name"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:219
+msgid "Flat"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:240
+msgid "Flatsome button style"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:131
+msgid "Form Background"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:40
+msgid "Form content"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:144
+msgid "Form text color"
+msgstr ""
+
+#: templates/elements/template-buy-one-click-header.php:6
+msgid "Global"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://morkva.co.ua"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:41
+msgid "Introduce additional content to your form"
+msgstr ""
+
+#: classes/woocommerce/mrkv-buy-one-click-woocommerce.php:28
+msgid "Invalid nonce."
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:272
+msgid "Label Font size"
+msgstr ""
+
+#. Author of the plugin
+msgid "MORKVA"
+msgstr ""
+
+#. Name of the plugin
+msgid "Morkva Buy One Click"
+msgstr ""
+
+#: classes/settings/admin/mrkv-buy-one-click-menu.php:34
+msgid "MRKV Buy One Click"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:187
+msgid "Open button background"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:200
+msgid "Open button text color"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:94
+msgid "Open form button text (Default: Buy now)"
+msgstr ""
+
+#: classes/controller/mrkv-buy-one-click-shortcodes.php:74
+msgid "Order created"
+msgstr ""
+
+#: templates/front/template-buy-one-click-form.php:17
+msgid "Phone"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:104
+msgid "Result text"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:116
+msgid "Result title"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-settings.php:27
+msgid "Save"
+msgstr ""
+
+#: templates/elements/template-buy-one-click-tabs.php:5
+msgid "Settings"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:22
+msgid "Shortcode"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:220
+msgid "Standart"
+msgstr ""
+
+#: templates/elements/template-buy-one-click-support.php:4
+#: templates/elements/template-buy-one-click-support.php:5
+msgid "Statistics of shipments"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:215
+msgid "Style type"
+msgstr ""
+
+#: classes/settings/admin/mrkv-buy-one-click-menu.php:49
+msgid "Styles"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:125
+msgid "Styles settings"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:60
+msgid "Subtitle"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:262
+msgid "Subtitle Font size"
+msgstr ""
+
+#: templates/elements/template-buy-one-click-support.php:6
+msgid "Support"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:72
+msgid "Text before button"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:246
+msgid "Text styles"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:50
+msgid "Title"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:254
+msgid "Title Font size"
+msgstr ""
+
+#: templates/settings/template-buy-one-click-sections.php:114
+msgid ""
+"Write the text for result title. Use shortcode [mrkv_boc_order_id] for show "
+"order number"
+msgstr ""

@@ -1,0 +1,2 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
+<div class="mrkv_buy-one-click__open-call button <?php echo esc_attr($flatsome_btn_class); ?>"><?php echo esc_html($open_call_btn_text); ?></div>
