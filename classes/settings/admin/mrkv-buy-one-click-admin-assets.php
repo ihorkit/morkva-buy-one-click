@@ -35,12 +35,12 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_ASSETS'))
 	        }
 
 	        # Custom style and script
-	        wp_enqueue_style('backend-mrkv-buy-one-click', MRKV_BUY_ONE_CLICK_PLUGIN_URL . 'assets/css/admin/backend-mrkv-buy-one-click.css', array(), '0.0.1');
-	        wp_enqueue_script('backend-mrkv-buy-one-click', MRKV_BUY_ONE_CLICK_PLUGIN_URL . 'assets/js/admin/backend-mrkv-buy-one-click.js', array('jquery'), '0.0.1', true);
+	        wp_enqueue_style('mrkv-buy-one-click', MRKV_BUY_ONE_CLICK_PLUGIN_URL . 'assets/css/admin/mrkv-buy-one-click.css', array(), '0.0.1');
+	        wp_enqueue_script('mrkv-buy-one-click', MRKV_BUY_ONE_CLICK_PLUGIN_URL . 'assets/js/admin/mrkv-buy-one-click.js', array('jquery'), '0.0.1', true);
 	        wp_enqueue_style( 'wp-color-picker' );
     		wp_enqueue_script( 'wp-color-picker' );
 
-	        wp_localize_script('backend-mrkv-buy-one-click', 'mrkv_buy_one_click_helper', [
+	        wp_localize_script('mrkv-buy-one-click', 'mrkv_buy_one_click_helper', [
 	            	'ajax_url' => admin_url( "admin-ajax.php" ),
 	            	'nonce'    => wp_create_nonce('mrkv_buy_one_click_nonce'),
 	        	]);

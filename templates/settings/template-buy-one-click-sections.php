@@ -28,14 +28,21 @@
 	</div>
 	<div class="admin_ua_ship_morkva_settings_row">
 		<div class="col-mrkv-5">
-			<div class="admin_ua_ship_morkva_settings_line">
+			<div class="admin_ua_ship_morkva_settings_line mrkv-field-disabled">
 				<?php 
-					$data = isset($settings_data['order_status']) ? $settings_data['order_status'] : '';
-					echo wp_kses($field_creator->get_select_simple(__('Choose a status created order', 'morkva-buy-one-click'), $settings_slug . '[order_status]', $all_order_statuses, $data, $settings_slug . '_order_status' , __('Choose a status', 'morkva-buy-one-click')), $allowed_tags);
+					$data = '';
+					$description = '<span class="mrkv-ua-ship-only-pro">' . __('Only in the Pro version', 'morkva-buy-one-click') . '</span>';
+					echo wp_kses($field_creator->get_select_simple(__('Order status', 'morkva-buy-one-click'), $settings_slug . '[order_status]', $all_order_statuses, $data, $settings_slug . '_order_status' , __('Choose a status', 'morkva-buy-one-click'), $description, 'disabled'), $allowed_tags);
 				?>
 			</div>
 		</div>
 		<div class="col-mrkv-5">
+			<div class="admin_ua_ship_morkva_settings_line">
+				<?php 
+					$data = isset($settings_data['position']) ? $settings_data['position'] : 'shortcode';
+					echo wp_kses($field_creator->get_select_simple(__('Position', 'morkva-buy-one-click'), $settings_slug . '[position]', $all_position_availiable, $data, $settings_slug . '_position' , __('Choose a position', 'morkva-buy-one-click')), $allowed_tags);
+				?>
+			</div>
 		</div>
 	</div>
 	<h3><img src="<?php echo esc_url(MRKV_BUY_ONE_CLICK_PLUGIN_URL . 'assets/images/clapperboard-edit-icon.svg'); ?>" alt="Form content" title="Form content"><?php echo esc_html__('Form content', 'morkva-buy-one-click'); ?></h3>
@@ -75,14 +82,6 @@
 			</div>
 		</div>
 		<div class="col-mrkv-5">
-			<div class="admin_ua_ship_morkva_settings_line">
-				<?php 
-					$data = isset($settings_data['content']['button']) ? $settings_data['content']['button'] : '';
-					$description = '';
-
-					echo wp_kses($field_creator->get_input_text(esc_html__('Button text (Default: Buy now)', 'morkva-buy-one-click'), $settings_slug . '[content][button]', $data, $settings_slug. '_content_button' , '', esc_html__('Enter the text...', 'morkva-buy-one-click'), $description), $allowed_tags);
-				?>
-			</div>
 		</div>
 	</div>
 	<div class="admin_ua_ship_morkva_settings_row">
@@ -99,10 +98,10 @@
 		<div class="col-mrkv-5">
 			<div class="admin_ua_ship_morkva_settings_line">
 				<?php 
-					$data = isset($settings_data['content']['result_text']) ? $settings_data['content']['result_text'] : '';
+					$data = isset($settings_data['content']['button']) ? $settings_data['content']['button'] : '';
 					$description = '';
 
-					echo wp_kses($field_creator->get_input_text(esc_html__('Result text', 'morkva-buy-one-click'), $settings_slug . '[content][result_text]', $data, $settings_slug. '_content_result_text' , '', esc_html__('Enter the text...', 'morkva-buy-one-click'), $description), $allowed_tags);
+					echo wp_kses($field_creator->get_input_text(esc_html__('Button text (Default: Buy now)', 'morkva-buy-one-click'), $settings_slug . '[content][button]', $data, $settings_slug. '_content_button' , '', esc_html__('Enter the text...', 'morkva-buy-one-click'), $description), $allowed_tags);
 				?>
 			</div>
 		</div>
@@ -112,9 +111,19 @@
 			<div class="admin_ua_ship_morkva_settings_line">
 				<?php 
 					$data = isset($settings_data['content']['result_title']) ? $settings_data['content']['result_title'] : '';
-					$description = esc_html__('Write the text for result title. Use shortcode [mrkv_boc_order_id] for show order number', 'morkva-buy-one-click');
+					$description = esc_html__('Write the text for result title. Use shortcode [mrkv_boc_order_id] for order number', 'morkva-buy-one-click');
 
 					echo wp_kses($field_creator->get_input_text(esc_html__('Result title', 'morkva-buy-one-click'), $settings_slug . '[content][result_title]', $data, $settings_slug. '_content_result_title' , '', esc_html__('Enter the text...', 'morkva-buy-one-click'), $description), $allowed_tags);
+				?>
+			</div>
+		</div>
+		<div class="col-mrkv-5">
+			<div class="admin_ua_ship_morkva_settings_line">
+				<?php 
+					$data = isset($settings_data['content']['result_text']) ? $settings_data['content']['result_text'] : '';
+					$description = '';
+
+					echo wp_kses($field_creator->get_input_text(esc_html__('Result text', 'morkva-buy-one-click'), $settings_slug . '[content][result_text]', $data, $settings_slug. '_content_result_text' , '', esc_html__('Enter the text...', 'morkva-buy-one-click'), $description), $allowed_tags);
 				?>
 			</div>
 		</div>
@@ -128,21 +137,23 @@
 	<hr class="mrkv-ua-ship__hr">
 	<div class="admin_ua_ship_morkva_settings_row">
 		<div class="col-mrkv-5">
-			<div class="admin_ua_ship_morkva_settings_line">
+			<div class="admin_ua_ship_morkva_settings_line mrkv-field-disabled">
 				<label for="m_boclick_settings_style_form_background"><?php echo esc_html__( 'Form Background', 'morkva-buy-one-click' ); ?></label>
+				<p class="mrkv-ua-ship-only-pro"><?php echo __('Only in the Pro version', 'morkva-buy-one-click'); ?></p>
 				<?php
-					$data = isset($settings_data['style']['form_background']) ? $settings_data['style']['form_background'] : '#ffffff';
+					$data = '#ffffff';
 				?>
 				<input id="m_boclick_settings_style_form_background" type="text"
 					name="<?php echo esc_attr($settings_slug); ?>[style][form_background]"
 					value="<?php echo esc_attr($data); ?>"
 					class="color-picker"
-					data-default-color="#ffffff" />
+					data-default-color="#ffffff" readonly />
 			</div>
 		</div>
 		<div class="col-mrkv-5">
-			<div class="admin_ua_ship_morkva_settings_line">
+			<div class="admin_ua_ship_morkva_settings_line mrkv-field-disabled">
 				<label for="m_boclick_settings_style_form_text_color"><?php echo esc_html__( 'Form text color', 'morkva-buy-one-click' ); ?></label>
+				<p class="mrkv-ua-ship-only-pro"><?php echo __('Only in the Pro version', 'morkva-buy-one-click'); ?></p>
 				<?php
 					$data = isset($settings_data['style']['form_text_color']) ? $settings_data['style']['form_text_color'] : '#000000';
 				?>
@@ -150,7 +161,7 @@
 					name="<?php echo esc_attr($settings_slug); ?>[style][form_text_color]"
 					value="<?php echo esc_attr($data); ?>"
 					class="color-picker"
-					data-default-color="#000000" />
+					data-default-color="#000000" readonly />
 			</div>
 		</div>
 	</div>
@@ -169,8 +180,9 @@
 			</div>
 		</div>
 		<div class="col-mrkv-5">
-			<div class="admin_ua_ship_morkva_settings_line">
+			<div class="admin_ua_ship_morkva_settings_line mrkv-field-disabled">
 				<label for="m_boclick_settings_style_form_btn_txt"><?php echo esc_html__( 'Button text color', 'morkva-buy-one-click' ); ?></label>
+				<p class="mrkv-ua-ship-only-pro"><?php echo __('Only in the Pro version', 'morkva-buy-one-click'); ?></p>
 				<?php
 					$data = isset($settings_data['style']['form_btn_txt']) ? $settings_data['style']['form_btn_txt'] : '#ffffff';
 				?>
@@ -178,7 +190,7 @@
 					name="<?php echo esc_attr($settings_slug); ?>[style][form_btn_txt]"
 					value="<?php echo esc_attr($data); ?>"
 					class="color-picker"
-					data-default-color="#ffffff" />
+					data-default-color="#ffffff" readonly />
 			</div>
 		</div>
 	</div>
@@ -197,8 +209,9 @@
 			</div>
 		</div>
 		<div class="col-mrkv-5">
-			<div class="admin_ua_ship_morkva_settings_line">
+			<div class="admin_ua_ship_morkva_settings_line mrkv-field-disabled">
 				<label for="m_boclick_settings_style_open_btn_txt"><?php echo esc_html__( 'Open button text color', 'morkva-buy-one-click' ); ?></label>
+				<p class="mrkv-ua-ship-only-pro"><?php echo __('Only in the Pro version', 'morkva-buy-one-click'); ?></p>
 				<?php
 					$data = isset($settings_data['style']['open_btn_txt']) ? $settings_data['style']['open_btn_txt'] : '#ffffff';
 				?>
@@ -206,40 +219,17 @@
 					name="<?php echo esc_attr($settings_slug); ?>[style][open_btn_txt]"
 					value="<?php echo esc_attr($data); ?>"
 					class="color-picker"
-					data-default-color="#ffffff" />
+					data-default-color="#ffffff" readonly />
 			</div>
 		</div>
 	</div>
 	<div class="admin_ua_ship_morkva_settings_row">
 		<div class="col-mrkv-5">
-			<div class="admin_ua_ship_morkva_settings_line">
-				<h4 style="margin-top: 0;"><?php echo esc_html__('Style type', 'morkva-buy-one-click'); ?></h4>
-				<div class="admin_ua_ship_morkva_settings_row">
-					<?php
-						$data = isset($settings_data['style']['type']) ? $settings_data['style']['type'] : 'flat';
-						echo wp_kses($field_creator->get_input_radio(esc_html__('Flat', 'morkva-buy-one-click'), $settings_slug . '[style][type]', 'flat', $data, $settings_slug . '_style_type_flat', 'flat'), $allowed_tags);
-						echo wp_kses($field_creator->get_input_radio(esc_html__('Standart', 'morkva-buy-one-click'), $settings_slug . '[style][type]', 'standart', $data, $settings_slug . '_style_type_standart', 'flat'), $allowed_tags);
-					?>
-				</div>
-			</div>
-		</div>
-		<div class="col-mrkv-5">
-			<div class="admin_ua_ship_morkva_settings_line">
-				<?php
-					$theme      = wp_get_theme();
-				    $parent     = $theme->parent();
-
-    				if ( ($parent && $parent->get( 'Name' ) === 'Flatsome') || $theme->get( 'Name' ) === 'Flatsome') 
-    				{
-    					$allowed_button_styles = array(
-    						'primary' => 'Primary',
-    						'secondary' => 'Secondary'
-    					);
-
-						$data = isset($settings_data['style']['flatsome']) ? $settings_data['style']['flatsome'] : '';
-
-						echo wp_kses($field_creator->get_select_simple(__('Flatsome button style', 'morkva-buy-one-click'), $settings_slug . '[style][flatsome]', $allowed_button_styles, $data, $settings_slug . '_flatsome_style' , __('Choose a style', 'morkva-buy-one-click'), ''), $allowed_tags);
-    				}
+			<div class="admin_ua_ship_morkva_settings_line mrkv-field-disabled">
+				<?php 
+					$data = 0;
+					$description = '<span class="mrkv-ua-ship-only-pro">' . __('Only in the Pro version', 'morkva-buy-one-click') . '</span>';
+					echo wp_kses($field_creator->get_input_number(esc_html__('Border radius', 'morkva-buy-one-click'), $settings_slug . '[style][type]', $data, $settings_slug. '_style_type' , '', '', $description, 'readonly'), $allowed_tags);
 				?>
 			</div>
 		</div>
@@ -249,36 +239,40 @@
 	<hr class="mrkv-ua-ship__hr">
 	<div class="admin_ua_ship_morkva_settings_row">
 		<div class="col-mrkv-5">
-			<div class="admin_ua_ship_morkva_settings_line ">
+			<div class="admin_ua_ship_morkva_settings_line mrkv-field-disabled">
 				<?php 
-					$data = isset($settings_data['style']['title_fs']) ? $settings_data['style']['title_fs'] : '';
-					echo wp_kses($field_creator->get_input_number(esc_html__('Title Font size', 'morkva-buy-one-click'), $settings_slug . '[style][title_fs]', $data, $settings_slug. '_style_title_fs' , '', '', ''), $allowed_tags);
+					$data = '';
+					$description = '<span class="mrkv-ua-ship-only-pro">' . __('Only in the Pro version', 'morkva-buy-one-click') . '</span>';
+					echo wp_kses($field_creator->get_input_number(esc_html__('Title Font size', 'morkva-buy-one-click'), $settings_slug . '[style][title_fs]', $data, $settings_slug. '_style_title_fs' , '', '', $description, 'readonly'), $allowed_tags);
 				?>
 			</div>
 		</div>
 		<div class="col-mrkv-5">
-			<div class="admin_ua_ship_morkva_settings_line ">
+			<div class="admin_ua_ship_morkva_settings_line mrkv-field-disabled">
 					<?php 
-						$data = isset($settings_data['style']['subtitle_fs']) ? $settings_data['style']['subtitle_fs'] : '';
-						echo wp_kses($field_creator->get_input_number(esc_html__('Subtitle Font size', 'morkva-buy-one-click'), $settings_slug . '[style][subtitle_fs]', $data, $settings_slug. '_style_subtitle_fs' , '', '', ''), $allowed_tags);
+						$data = '';
+						$description = '<span class="mrkv-ua-ship-only-pro">' . __('Only in the Pro version', 'morkva-buy-one-click') . '</span>';
+						echo wp_kses($field_creator->get_input_number(esc_html__('Subtitle Font size', 'morkva-buy-one-click'), $settings_slug . '[style][subtitle_fs]', $data, $settings_slug. '_style_subtitle_fs' , '', '', $description, 'readonly'), $allowed_tags);
 					?>
 			</div>
 		</div>
 	</div>
 	<div class="admin_ua_ship_morkva_settings_row">
 		<div class="col-mrkv-5">
-			<div class="admin_ua_ship_morkva_settings_line ">
+			<div class="admin_ua_ship_morkva_settings_line mrkv-field-disabled">
 					<?php 
-						$data = isset($settings_data['style']['label_fs']) ? $settings_data['style']['label_fs'] : '';
-						echo wp_kses($field_creator->get_input_number(esc_html__('Label Font size', 'morkva-buy-one-click'), $settings_slug . '[style][label_fs]', $data, $settings_slug. '_style_label_fs' , '', '', ''), $allowed_tags);
+						$data = '';
+						$description = '<span class="mrkv-ua-ship-only-pro">' . __('Only in the Pro version', 'morkva-buy-one-click') . '</span>';
+						echo wp_kses($field_creator->get_input_number(esc_html__('Label Font size', 'morkva-buy-one-click'), $settings_slug . '[style][label_fs]', $data, $settings_slug. '_style_label_fs' , '', '', $description, 'readonly'), $allowed_tags);
 					?>
 			</div>
 		</div>
 		<div class="col-mrkv-5">
-			<div class="admin_ua_ship_morkva_settings_line ">
+			<div class="admin_ua_ship_morkva_settings_line mrkv-field-disabled">
 					<?php 
-						$data = isset($settings_data['style']['button_fs']) ? $settings_data['style']['button_fs'] : '';
-						echo wp_kses($field_creator->get_input_number(esc_html__('Button Font size', 'morkva-buy-one-click'), $settings_slug . '[style][button_fs]', $data, $settings_slug. '_style_button_fs' , '', '', ''), $allowed_tags);
+						$data = '';
+						$description = '<span class="mrkv-ua-ship-only-pro">' . __('Only in the Pro version', 'morkva-buy-one-click') . '</span>';
+						echo wp_kses($field_creator->get_input_number(esc_html__('Button Font size', 'morkva-buy-one-click'), $settings_slug . '[style][button_fs]', $data, $settings_slug. '_style_button_fs' , '', '', $description, 'readonly'), $allowed_tags);
 					?>
 			</div>
 		</div>

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Morkva Buy One Click\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-11 06:45+0000\n"
-"PO-Revision-Date: 2025-07-11 07:01+0000\n"
+"PO-Revision-Date: 2025-07-25 04:51+0000\n"
 "Last-Translator: \n"
 "Language-Team: Українська\n"
 "Language: uk\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.8.0; wp-6.8.1; php-8.2.28\n"
+"X-Loco-Version: 2.8.0; wp-6.8.2; php-8.3.23\n"
 "X-Domain: mrkv-buy-one-click"
 
 #. Description of the plugin
@@ -25,27 +25,35 @@ msgstr ""
 " Дозвольте клієнтам миттєво розміщувати замовлення за мінімальну кількість "
 "кроків."
 
+#: classes/settings/admin/mrkv-buy-one-click-menu.php:55
+msgid "After add to cart button"
+msgstr "Після кнопки «Додати до кошика»"
+
 #: classes/settings/admin/mrkv-buy-one-click-menu.php:48
 msgid "Basic"
 msgstr "Базові"
 
-#: templates/settings/template-buy-one-click-sections.php:4
+#: templates/settings/template-buy-one-click-sections.php:5
 msgid "Basic settings"
 msgstr "Базові налаштування"
 
-#: templates/settings/template-buy-one-click-sections.php:159
+#: templates/settings/template-buy-one-click-sections.php:232
+msgid "Border radius"
+msgstr "Радіус границі"
+
+#: templates/settings/template-buy-one-click-sections.php:171
 msgid "Button background"
 msgstr "Фон кнопки"
 
-#: templates/settings/template-buy-one-click-sections.php:280
+#: templates/settings/template-buy-one-click-sections.php:275
 msgid "Button Font size"
 msgstr "Розмір шрифту кнопки"
 
-#: templates/settings/template-buy-one-click-sections.php:82
+#: templates/settings/template-buy-one-click-sections.php:94
 msgid "Button text (Default: Buy now)"
 msgstr "Текст кнопки (За замовчуванням: Купити зараз)"
 
-#: templates/settings/template-buy-one-click-sections.php:172
+#: templates/settings/template-buy-one-click-sections.php:184
 msgid "Button text color"
 msgstr "Колір тексту кнопки"
 
@@ -54,84 +62,72 @@ msgstr "Колір тексту кнопки"
 msgid "Buy now"
 msgstr "Купити зараз"
 
-#: templates/settings/template-buy-one-click-sections.php:33
+#: templates/settings/template-buy-one-click-sections.php:43
+msgid "Choose a position"
+msgstr "Виберіть позицію"
+
+#: templates/settings/template-buy-one-click-sections.php:35
 msgid "Choose a status"
 msgstr "Оберіть статус"
 
-#: templates/settings/template-buy-one-click-sections.php:33
-msgid "Choose a status created order"
-msgstr "Оберіть статус створеного замовлення"
-
-#: templates/settings/template-buy-one-click-sections.php:240
-msgid "Choose a style"
-msgstr "Виберіть стиль"
-
-#: templates/settings/template-buy-one-click-sections.php:247
+#: templates/settings/template-buy-one-click-sections.php:238
 msgid "Customize the text in the form"
 msgstr "Налаштуйте текст у формі"
 
-#: templates/elements/template-buy-one-click-support.php:12
+#: templates/elements/template-buy-one-click-support.php:13
 msgid "E-mail"
 msgstr "E-mail"
 
-#: templates/settings/template-buy-one-click-sections.php:15
+#: templates/settings/template-buy-one-click-sections.php:16
 msgid "Enable to activate the buy one click functionality on your website"
 msgstr ""
 "Увімкніть, щоб активувати функцію «купити в один клік» на вашому веб-сайті"
 
-#: templates/settings/template-buy-one-click-sections.php:12
+#: templates/settings/template-buy-one-click-sections.php:13
 msgid "Enable/Disable"
 msgstr "Увімкнути/вимкнути"
 
-#: templates/settings/template-buy-one-click-sections.php:60
+#: templates/settings/template-buy-one-click-sections.php:68
 msgid "Enter the subtitle..."
 msgstr "Введіть підзаголовок..."
 
-#: templates/settings/template-buy-one-click-sections.php:72
-#: templates/settings/template-buy-one-click-sections.php:82
+#: templates/settings/template-buy-one-click-sections.php:80
 #: templates/settings/template-buy-one-click-sections.php:94
 #: templates/settings/template-buy-one-click-sections.php:104
 #: templates/settings/template-buy-one-click-sections.php:116
+#: templates/settings/template-buy-one-click-sections.php:126
 msgid "Enter the text..."
 msgstr "Введіть текст..."
 
-#: templates/settings/template-buy-one-click-sections.php:50
+#: templates/settings/template-buy-one-click-sections.php:58
 msgid "Enter the title..."
 msgstr "Введіть заголовок..."
 
-#: templates/front/template-buy-one-click-form.php:14
+#: templates/front/template-buy-one-click-form.php:15
 msgid "Enter your name..."
 msgstr "Введіть своє ім'я..."
 
-#: templates/elements/template-buy-one-click-support.php:8
+#: templates/elements/template-buy-one-click-support.php:9
 msgid "Feel free to contact our support team."
 msgstr "Не соромтеся звертатися до нашої служби підтримки."
 
-#: templates/front/template-buy-one-click-form.php:13
+#: templates/front/template-buy-one-click-form.php:14
 msgid "First Name"
 msgstr "Ім'я"
 
-#: templates/settings/template-buy-one-click-sections.php:219
-msgid "Flat"
-msgstr "Flat"
-
-#: templates/settings/template-buy-one-click-sections.php:240
-msgid "Flatsome button style"
-msgstr "Flatsome стилі кнопок"
-
-#: templates/settings/template-buy-one-click-sections.php:131
+#: templates/settings/template-buy-one-click-sections.php:141
 msgid "Form Background"
 msgstr "Фон форми"
 
-#: templates/settings/template-buy-one-click-sections.php:40
+#: templates/settings/template-buy-one-click-sections.php:48
 msgid "Form content"
 msgstr "Контент форми"
 
-#: templates/settings/template-buy-one-click-sections.php:144
+#: templates/settings/template-buy-one-click-sections.php:155
 msgid "Form text color"
 msgstr "Колір тексту форми"
 
-#: templates/elements/template-buy-one-click-header.php:6
+#: templates/elements/template-buy-one-click-header.php:7
 msgid "Global"
 msgstr "Глобальні"
 
@@ -139,15 +135,15 @@ msgstr "Глобальні"
 msgid "https://morkva.co.ua"
 msgstr "https://morkva.co.ua"
 
-#: templates/settings/template-buy-one-click-sections.php:41
+#: templates/settings/template-buy-one-click-sections.php:49
 msgid "Introduce additional content to your form"
 msgstr "Додайте додатковий вміст до вашої форми"
 
-#: classes/woocommerce/mrkv-buy-one-click-woocommerce.php:28
+#: classes/woocommerce/mrkv-buy-one-click-woocommerce.php:30
 msgid "Invalid nonce."
 msgstr "Invalid nonce."
 
-#: templates/settings/template-buy-one-click-sections.php:272
+#: templates/settings/template-buy-one-click-sections.php:266
 msgid "Label Font size"
 msgstr "Розмір шрифту label"
 
@@ -163,99 +159,116 @@ msgstr "Morkva Buy One Click"
 msgid "MRKV Buy One Click"
 msgstr "MRKV Buy One Click"
 
-#: templates/settings/template-buy-one-click-sections.php:187
-msgid "Open button background"
-msgstr "Фон відкриющої кнопки"
+#: templates/settings/template-buy-one-click-sections.php:34
+#: templates/settings/template-buy-one-click-sections.php:142
+#: templates/settings/template-buy-one-click-sections.php:156
+#: templates/settings/template-buy-one-click-sections.php:185
+#: templates/settings/template-buy-one-click-sections.php:214
+#: templates/settings/template-buy-one-click-sections.php:231
+#: templates/settings/template-buy-one-click-sections.php:245
+#: templates/settings/template-buy-one-click-sections.php:254
+#: templates/settings/template-buy-one-click-sections.php:265
+#: templates/settings/template-buy-one-click-sections.php:274
+msgid "Only in the Pro version"
+msgstr "Лише у Про-версії"
 
 #: templates/settings/template-buy-one-click-sections.php:200
-msgid "Open button text color"
-msgstr "Колір тексту відкриющої кнопки"
+msgid "Open button background"
+msgstr "Фон відкриваючої кнопки"
 
-#: templates/settings/template-buy-one-click-sections.php:94
+#: templates/settings/template-buy-one-click-sections.php:213
+msgid "Open button text color"
+msgstr "Колір тексту відкриваючої кнопки"
+
+#: templates/settings/template-buy-one-click-sections.php:104
 msgid "Open form button text (Default: Buy now)"
-msgstr "Текст відкриющої кнопки (За замовчуванням: Купити зараз)"
+msgstr "Текст відкриваючої кнопки (За замовчуванням: Купити зараз)"
 
 #: classes/controller/mrkv-buy-one-click-shortcodes.php:74
 msgid "Order created"
 msgstr "Замовлення створено"
 
-#: templates/front/template-buy-one-click-form.php:17
+#: templates/settings/template-buy-one-click-sections.php:35
+msgid "Order status"
+msgstr "Статус замовлення"
+
+#: templates/front/template-buy-one-click-form.php:18
 msgid "Phone"
 msgstr "Телефон"
 
-#: templates/settings/template-buy-one-click-sections.php:104
+#: templates/settings/template-buy-one-click-sections.php:43
+msgid "Position"
+msgstr "Позиція"
+
+#: templates/settings/template-buy-one-click-sections.php:116
 msgid "Result text"
 msgstr "Текст результату"
 
-#: templates/settings/template-buy-one-click-sections.php:116
+#: templates/settings/template-buy-one-click-sections.php:126
 msgid "Result title"
 msgstr "Заголовок результату"
 
-#: templates/settings/template-buy-one-click-settings.php:27
+#: templates/settings/template-buy-one-click-settings.php:28
 msgid "Save"
 msgstr "Зберегти"
 
-#: templates/elements/template-buy-one-click-tabs.php:5
+#: templates/elements/template-buy-one-click-tabs.php:6
 msgid "Settings"
 msgstr "Налаштування"
 
-#: templates/settings/template-buy-one-click-sections.php:22
+#: templates/settings/template-buy-one-click-sections.php:23
+#: classes/settings/admin/mrkv-buy-one-click-menu.php:54
 msgid "Shortcode"
 msgstr "Шорткод"
 
-#: templates/settings/template-buy-one-click-sections.php:220
-msgid "Standart"
-msgstr "Standart"
-
-#: templates/elements/template-buy-one-click-support.php:4
 #: templates/elements/template-buy-one-click-support.php:5
+#: templates/elements/template-buy-one-click-support.php:6
 msgid "Statistics of shipments"
 msgstr "Статистика відправлень"
-
-#: templates/settings/template-buy-one-click-sections.php:215
-msgid "Style type"
-msgstr "Тип стилю"
 
 #: classes/settings/admin/mrkv-buy-one-click-menu.php:49
 msgid "Styles"
 msgstr "Стилі"
 
-#: templates/settings/template-buy-one-click-sections.php:125
+#: templates/settings/template-buy-one-click-sections.php:135
 msgid "Styles settings"
 msgstr "Налаштування стилів"
 
-#: templates/settings/template-buy-one-click-sections.php:60
+#: templates/settings/template-buy-one-click-sections.php:68
 msgid "Subtitle"
 msgstr "Підзаголовок"
 
-#: templates/settings/template-buy-one-click-sections.php:262
+#: templates/settings/template-buy-one-click-sections.php:255
 msgid "Subtitle Font size"
 msgstr "Розмір шрифту підзаголовку"
 
-#: templates/elements/template-buy-one-click-support.php:6
+#: templates/elements/template-buy-one-click-support.php:7
 msgid "Support"
 msgstr "Підтримка"
 
-#: templates/settings/template-buy-one-click-sections.php:72
+#: templates/settings/template-buy-one-click-sections.php:80
 msgid "Text before button"
 msgstr "Текст перед кнопкою"
 
-#: templates/settings/template-buy-one-click-sections.php:246
+#: templates/settings/template-buy-one-click-sections.php:237
 msgid "Text styles"
 msgstr "Стилі тексту"
 
-#: templates/settings/template-buy-one-click-sections.php:50
+#: templates/settings/template-buy-one-click-sections.php:58
 msgid "Title"
 msgstr "Заголовок"
 
-#: templates/settings/template-buy-one-click-sections.php:254
+#: templates/settings/template-buy-one-click-sections.php:246
 msgid "Title Font size"
 msgstr "Розмір шрифту заголовка"
 
-#: templates/settings/template-buy-one-click-sections.php:114
+#: templates/settings/template-buy-one-click-sections.php:124
+#| msgid ""
+#| "Write the text for result title. Use shortcode [mrkv_boc_order_id] for "
+#| "show order number"
 msgid ""
-"Write the text for result title. Use shortcode [mrkv_boc_order_id] for show "
-"order number"
+"Write the text for result title. Use shortcode [mrkv_boc_order_id] for order "
+"number"
 msgstr ""
 "Напишіть текст для заголовка результату. Використовуйте шорткод "
 "[mrkv_boc_order_id], щоб показати номер замовлення"

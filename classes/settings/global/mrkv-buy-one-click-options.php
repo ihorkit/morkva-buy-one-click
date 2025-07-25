@@ -26,9 +26,9 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_OPTIONS'))
 	    public function mrkv_buy_one_click_register_settings() {
 		    register_setting(
 		        'mrkv-buy-one-click-settings-group', 
-		        'm_boclick_settings',                
+		        'mrkv_buy_one_settings',                
 		        [
-		            'sanitize_callback' => [ $this, 'sanitize_m_boclick_settings' ],
+		            'sanitize_callback' => [ $this, 'sanitize_mrkv_buy_one_settings' ],
 		        ]
 		    );
 		}
@@ -36,7 +36,7 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_OPTIONS'))
 		/**
 		 * Sanitize all settings field
 		 * */
-		public function sanitize_m_boclick_settings( $input ) {
+		public function sanitize_mrkv_buy_one_settings( $input ) {
 		    $output = [];
 
 		    if ( is_array( $input ) ) {

@@ -17,6 +17,8 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_WOOCOMMERCE'))
 		{
 			add_action( 'wp_ajax_mrkv_buy_one_click__create_order', array($this, 'mrkv_buy_one_click__create_order_func') );
 			add_action( 'wp_ajax_nopriv_mrkv_buy_one_click__create_order', array($this, 'mrkv_buy_one_click__create_order_func') );
+
+			add_action('woocommerce_single_product_summary', array($this, 'mrkv_buy_one_click__add_btn'), 31);
 		}
 
 		/**
@@ -35,9 +37,9 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_WOOCOMMERCE'))
 
 		    $product = wc_get_product( $product_id );
 
-		    $settings_data = get_option('m_boclick_settings');
+		    $settings_data = get_option('mrkv_buy_one_settings');
 			$is_active_show = isset($settings_data['enabled']) ? $settings_data['enabled'] : '';
-			$order_status = isset($settings_data['order_status']) ? $settings_data['order_status'] : 'on-hold';
+			$order_status = 'on-hold';
 
 		    if($is_active_show && $product && $first_name && $phone)
 		    {
@@ -57,12 +59,21 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_WOOCOMMERCE'))
 
 			    WC()->mailer()->emails['WC_Email_New_Order']->trigger($order->get_id());
 
-			    echo json_encode(array(
-			    	'order_number' => $order->get_id()
-			    ));
+			    wp_send_json( array(
+				    'order_number' => $order->get_id(),
+				) );
 		    }
 
 		    wp_die();
+		}
+
+		public function mrkv_buy_one_click__add_btn()
+		{
+			$settings_data = get_option('mrkv_buy_one_settings');
+
+		    if ( isset($settings_data['position']) && $settings_data['position'] === 'after_add_to_cart_button' ) {
+		        echo do_shortcode('[mrkv_buy_one_click]');
+		    }
 		}
 	}
 }

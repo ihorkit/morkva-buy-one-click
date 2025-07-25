@@ -49,8 +49,14 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_MENU'))
 				'styles_settings' => __('Styles', 'morkva-buy-one-click'),
 			);
 
+			# Position list 
+			$all_position_availiable = array(
+				'shortcode' => __('Shortcode', 'morkva-buy-one-click'),
+				'after_add_to_cart_button' => __('After add to cart button', 'morkva-buy-one-click'),
+			);
+
 			# Get data settings 
-			$settings_slug = 'm_boclick_settings';
+			$settings_slug = 'mrkv_buy_one_settings';
 			$settings_data = get_option($settings_slug);
 
 			# Get field creator object

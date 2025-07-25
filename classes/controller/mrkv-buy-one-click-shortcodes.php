@@ -26,7 +26,7 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_SHORTCODES'))
 			ob_start();
 
 			$template_path = MRKV_BUY_ONE_CLICK_PLUGIN_PATH . 'templates/front/template-buy-one-click-button.php';
-			$settings_data = get_option('m_boclick_settings');
+			$settings_data = get_option('mrkv_buy_one_settings');
 			$is_active_show = isset($settings_data['enabled']) ? $settings_data['enabled'] : '';
 			global $product;
 
@@ -60,7 +60,7 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_SHORTCODES'))
 		 * */
 		public function mrkv_buy_one_click_footer_content()
 		{
-			$settings_data = get_option('m_boclick_settings');
+			$settings_data = get_option('mrkv_buy_one_settings');
 
 			$form_title = isset($settings_data['content']['title']) ? $settings_data['content']['title'] : '';
 			$form_subtitle = isset($settings_data['content']['subtitle']) ? $settings_data['content']['subtitle'] : '';

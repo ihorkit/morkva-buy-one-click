@@ -1,4 +1,4 @@
-.mrkv_buy-one-click__open-call, .mrkv_buy-one-click__create_order{
+.mrkv_buy-one-click__open-call.button, .mrkv_buy-one-click__create_order{
   font-weight: 500;
     font-size: 16px;
     line-height: 28px;
@@ -9,7 +9,7 @@
     cursor: pointer;
     margin-bottom: 20px;
 }
-.mrkv_buy-one-click__open-call:hover, .mrkv_buy-one-click__create_order:hover{
+.mrkv_buy-one-click__open-call.button:hover, .mrkv_buy-one-click__create_order:hover{
   box-shadow: inset 0 0 0 100px rgba(0,0,0,.2);
   transition: all .3s;
 }
