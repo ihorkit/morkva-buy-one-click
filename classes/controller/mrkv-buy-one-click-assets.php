@@ -45,8 +45,8 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_FRONT_ASSETS'))
 					$button_fs = isset($settings_data['style']['button_fs']) ? $settings_data['style']['button_fs'] : '';
 
 					$settings_css = "
-					    .mrkv_buy-one-click__form__inner, .mrkv_buy-one-click__open-call,
-					    #mrkv_buy-one-click__username, #mrkv_buy-one-click__phone, .mrkv_buy-one-click__create_order,
+					    .mrkv_buy-one-click__form__inner, .mrkv_buy-one-click__open-call.button,
+					    #mrkv_buy-one-click__username, #mrkv_buy-one-click__phone, .mrkv_buy-one-click__create_order.button,
 					    .mrkv_buy-one-click__form__inner .iti__selected-flag {
 					        border-radius: " . esc_attr($border_radius) . " !important;
 					    }
@@ -69,12 +69,12 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_FRONT_ASSETS'))
 					    .mrkv_buy-one-click__form__inner label {
 					        font-size: " . esc_attr($label_fs) . "px;
 					    }
-					    .mrkv_buy-one-click__open-call {
+					    .mrkv_buy-one-click__open-call.button {
 					        background-color: " . esc_attr($open_btn_back) . ";
 					        color: " . esc_attr($open_btn_txt) . ";
 					        font-size: " . esc_attr($button_fs) . "px;
 					    }
-					    .mrkv_buy-one-click__create_order {
+					    .mrkv_buy-one-click__create_order.button {
 					        background-color: " . esc_attr($form_btn_back) . ";
 					        color: " . esc_attr($form_btn_txt) . ";
 					        font-size: " . esc_attr($button_fs) . "px;
