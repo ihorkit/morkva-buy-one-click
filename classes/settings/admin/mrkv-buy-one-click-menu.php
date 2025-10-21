@@ -52,7 +52,8 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_MENU'))
 			# Position list 
 			$all_position_availiable = array(
 				'shortcode' => __('Shortcode', 'morkva-buy-one-click'),
-				'after_add_to_cart_button' => __('After add to cart button', 'morkva-buy-one-click'),
+				'after_add_to_cart_button_main' => __('After add to cart button', 'morkva-buy-one-click'),
+				'after_add_to_cart_button' => __('Summary', 'morkva-buy-one-click'),
 			);
 
 			# Get data settings 

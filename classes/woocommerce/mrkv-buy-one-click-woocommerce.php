@@ -18,7 +18,8 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_WOOCOMMERCE'))
 			add_action( 'wp_ajax_mrkv_buy_one_click__create_order', array($this, 'mrkv_buy_one_click__create_order_func') );
 			add_action( 'wp_ajax_nopriv_mrkv_buy_one_click__create_order', array($this, 'mrkv_buy_one_click__create_order_func') );
 
-			add_action('woocommerce_single_product_summary', array($this, 'mrkv_buy_one_click__add_btn'), 31);
+			add_action('woocommerce_single_product_summary', array($this, 'mrkv_buy_one_click_summary_add_btn'), 31);
+			add_action('woocommerce_after_add_to_cart_button', array($this, 'mrkv_buy_one_click__add_btn'), 31);
 		}
 
 		/**
@@ -67,11 +68,20 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_WOOCOMMERCE'))
 		    wp_die();
 		}
 
-		public function mrkv_buy_one_click__add_btn()
+		public function mrkv_buy_one_click_summary_add_btn()
 		{
 			$settings_data = get_option('mrkv_buy_one_settings');
 
 		    if ( isset($settings_data['position']) && $settings_data['position'] === 'after_add_to_cart_button' ) {
+		        echo do_shortcode('[mrkv_buy_one_click]');
+		    }
+		}
+
+		public function mrkv_buy_one_click__add_btn()
+		{
+			$settings_data = get_option('mrkv_buy_one_settings');
+
+		    if ( isset($settings_data['position']) && $settings_data['position'] === 'after_add_to_cart_button_main' ) {
 		        echo do_shortcode('[mrkv_buy_one_click]');
 		    }
 		}
