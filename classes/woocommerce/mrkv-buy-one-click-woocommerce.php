@@ -48,21 +48,19 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_WOOCOMMERCE'))
 			        $order_status = 'wc-' . $order_status;
 			    }
 
-		    	$order = wc_create_order();
-		    	$order->add_product( $product, 1 );
-		    	$order->set_address( array(
-			        'first_name' => sanitize_text_field( $first_name ),
-			        'phone'      => sanitize_text_field( $phone ),
-			    ), 'billing' );
-			    $order->set_status( $order_status ); 
-			    $order->calculate_totals();
-			    $order->save();
+			    $order = new WC_Order();
+			    $order->add_product( $product, 1 );
+			    $order->set_billing_first_name( sanitize_text_field( $first_name ) );
+    			$order->set_billing_phone( sanitize_text_field( $phone ) );
+    			$order->calculate_totals();
+    			$order->set_status( $order_status );
+    			$order_id = $order->save();
 
-			    WC()->mailer()->emails['WC_Email_New_Order']->trigger($order->get_id());
+		    	WC()->mailer()->emails['WC_Email_New_Order']->trigger($order_id);
 
-			    wp_send_json( array(
-				    'order_number' => $order->get_id(),
-				) );
+			    echo json_encode(array(
+			    	'order_number' => $order->get_id()
+			    ));
 		    }
 
 		    wp_die();

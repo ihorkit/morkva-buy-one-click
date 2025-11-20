@@ -4,7 +4,7 @@ Tags: buy now, one click checkout, quick order
 Requires at least: 5.8
 Tested up to: 6.8.2
 Requires PHP: 7.4
-Stable tag: 0.2.2
+Stable tag: 0.2.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,6 +63,9 @@ Basic customization (text and labels) is available in free. Full **style control
 
 
 == Changelog ==
+
+= 0.2.3 =
+* [fix] change order creator function
 
 = 0.2.2 =
 * [new] added new position
