@@ -1,10 +1,10 @@
-=== Morkva Buy One Click ===
+=== Morkva quick order button ===
 Contributors: bandido, dpmine
 Tags: buy now, one click checkout, quick order
 Requires at least: 5.8
 Tested up to: 6.9.0
 Requires PHP: 7.4
-Stable tag: 0.2.4
+Stable tag: 0.2.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Add a "Buy in 1 click" button to WooCommerce product pages for faster checkout. 
 
 == Description ==
 
-**Morkva Buy One Click** is a lightweight plugin that adds a fast and simple **"Buy now"** button to your WooCommerce product pages. Ideal for stores that want to reduce friction and increase conversions.
+**Morkva quick order button** is a lightweight plugin that adds a fast and simple **"Buy now"** button to your WooCommerce product pages. Ideal for stores that want to reduce friction and increase conversions.
 
 ### 🔹 What it does:
 - Adds a "Buy now" button below the "Add to cart" button — or use via shortcode.
@@ -38,7 +38,7 @@ Add a "Buy in 1 click" button to WooCommerce product pages for faster checkout. 
 
 1. Upload the plugin files to the /wp-content/plugins/mrkv-buy-one-click directory or install through the WordPress admin.
 2. Activate the plugin through the "Plugins" menu.
-3. Go to **WooCommerce → Settings → Morkva Buy One Click** to configure the form and button.
+3. Go to **WooCommerce → Settings → Morkva quick order button** to configure the form and button.
 4. Add the shortcode [mrkv_buy_one_click] if you want to place the button manually.
 
 == Frequently Asked Questions ==
@@ -63,6 +63,10 @@ Basic customization (text and labels) is available in free. Full **style control
 
 
 == Changelog ==
+
+= 0.2.5 =
+* [new] changed plugin name
+* [fix] fixed settings field
 
 = 0.2.4 =
 * WP 6.9 - сумісний

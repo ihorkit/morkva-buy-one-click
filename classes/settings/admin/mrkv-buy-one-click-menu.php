@@ -31,7 +31,7 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_MENU'))
 		public function mrkv_buy_one_click_register_plugin_page()
 		{
 			# Add menu to WP
-	        add_menu_page(__('MRKV Buy One Click', 'morkva-buy-one-click'), __('MRKV Buy One Click', 'morkva-buy-one-click'), 'manage_options', $this->slug, array($this, 'mrkv_buy_one_click_get_plugin_settings_content'), MRKV_BUY_ONE_CLICK_PLUGIN_URL . 'assets/images/morkva-icon-20x20.svg');
+	        add_menu_page(__('Morkva quick order button', 'morkva-buy-one-click'), __('Morkva quick order button', 'morkva-buy-one-click'), 'manage_options', $this->slug, array($this, 'mrkv_buy_one_click_get_plugin_settings_content'), MRKV_BUY_ONE_CLICK_PLUGIN_URL . 'assets/images/morkva-icon-20x20.svg');
 		}
 
 		/**
@@ -97,6 +97,9 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_MENU'))
 			        'selected' => true,
 			        'label'    => true,
 			    ),
+			    'p' => array(
+			        'class' => true,
+			    )
 			);
 
 			# Get all statuses
