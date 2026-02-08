@@ -48,7 +48,12 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_WOOCOMMERCE'))
 			        $order_status = 'wc-' . $order_status;
 			    }
 
-			    $order = new WC_Order();
+			    $order = wc_create_order();
+
+			    if ( is_wp_error( $order ) ) {
+			    	wp_send_json_error( __( 'Failed to create order.', 'morkva-buy-one-click' ), 500 );
+			    }
+
 			    $order->add_product( $product, 1 );
 			    $order->set_billing_first_name( sanitize_text_field( $first_name ) );
     			$order->set_billing_phone( sanitize_text_field( $phone ) );
@@ -56,11 +61,17 @@ if (!class_exists('MRKV_BUY_ONE_CLICK_WOOCOMMERCE'))
     			$order->set_status( $order_status );
     			$order_id = $order->save();
 
-		    	WC()->mailer()->emails['WC_Email_New_Order']->trigger($order_id);
+    			$mailer = WC()->mailer();
+    			$emails = $mailer->get_emails();
+    			if ( isset( $emails['WC_Email_New_Order'] ) ) {
+    				$emails['WC_Email_New_Order']->trigger( $order_id );
+    			}
 
-			    echo json_encode(array(
-			    	'order_number' => $order->get_id()
-			    ));
+			    wp_send_json_success(
+			    	array(
+			    		'order_number' => $order->get_id()
+			    	)
+			    );
 		    }
 
 		    wp_die();
