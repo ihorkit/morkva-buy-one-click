@@ -10,7 +10,7 @@
  * Author URI: https://morkva.co.ua
  * Text Domain: morkva-buy-one-click
  * WC requires at least: 5.4.0
- * WC tested up to: 9.8.0
+ * WC tested up to: 10.5.0
  * Domain Path: /i18n/
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -24,6 +24,7 @@ if (! defined('ABSPATH')){
 add_action( 'before_woocommerce_init', function() {
     if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
         \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+        \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'cart_checkout_blocks', __FILE__, true );
     }
 } );
 
